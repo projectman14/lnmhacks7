@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Minecraft': ['Minecraft', 'sans-serif'],
+        'IBM-PLEX-MONO': ["IBM Plex Mono", "monospace"],
+        'Handjet': ["Handjet", 'sans-serif']
+      },
+    },
   },
   plugins: [],
 }
