@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-const About = () => {
+const About = ({aboutRef}) => {
 
     useGSAP(() => {
         gsap.from('#about-data', {
@@ -32,7 +32,8 @@ const About = () => {
     }, [])
     return (
         <div className="bg-cover bg-center bg-no-repeat h-screen w-screen bg-[#282729] overflow-hidden"
-            style={{ backgroundImage: `url(${background})` }}>
+            style={{ backgroundImage: `url(${background})` }}
+            ref={aboutRef}>
             <div className='flex  mx-[6rem] mt-12 '>
                 <div className='flex flex-col '>
                     <div className='flex mt-[2rem]'>

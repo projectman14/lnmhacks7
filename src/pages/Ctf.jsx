@@ -10,7 +10,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-const Ctf = () => {
+const Ctf = ({ctfRef}) => {
 
     useGSAP(() => {
         gsap.from('#ctf-data', {
@@ -35,6 +35,7 @@ const Ctf = () => {
         <div
             className="bg-cover bg-center bg-no-repeat h-screen w-screen bg-[#282729] overflow-hidden"
             style={{ backgroundImage: `url(${background})` }}
+            ref={ctfRef}
         >
             <div className="flex mx-24 mt-16 justify-between">
                 <div className="flex flex-col">

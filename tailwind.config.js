@@ -9,7 +9,9 @@ export default {
       fontFamily: {
         'Minecraft': ['Minecraft', 'sans-serif'],
         'IBM-PLEX-MONO': ["IBM Plex Mono", "monospace"],
-        'Handjet': ["Handjet", 'sans-serif']
+        'Handjet': ["Handjet", 'sans-serif'],
+        'Rajdhani': ["Rajdhani", 'sans-serif'],
+        'Pixeboy' : ['Pixeboy', 'sans-serif']
       },
     },
   },
