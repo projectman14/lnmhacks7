@@ -1,34 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Hero from './pages/Hero'
+import About from './pages/About'
+import Ctf from './pages/Ctf'
+import Venue from './pages/Venue'
+import { useRef } from 'react'
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { Helmet } from 'react-helmet';
+gsap.registerPlugin(useGSAP);
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const aboutRef = useRef(null);
+  const ctfRef = useRef(null);
+  const venueRef = useRef(null);
+
+  useGSAP(() => {
+    setTimeout(() => {
+      gsap.to('.Containts', {
+        display: 'block',
+        duration: 0
+      })
+    }, 7500)
+  }, [])
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='overflow-x-hidden Scrollbar'>
+      <Helmet>
+        <title>LnmHacks 7.0</title>
+        <meta name="description" content="Welcome to the official home page of LnmHacks 6.0" />
+      </Helmet>
+      <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} />
+      <About aboutRef={aboutRef} />
+      <Ctf ctfRef={ctfRef} />
+      <Venue venueRef={venueRef} />
+    </div>
   )
 }
 
