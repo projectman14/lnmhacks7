@@ -13,14 +13,14 @@ gsap.registerPlugin(ScrollTrigger);
 const Ctf = ({ ctfRef }) => {
 
     useGSAP(() => {
-        gsap.from('#ctf-data', {
-            x: -300,
-            duration: 1.2,
-            scrollTrigger: {
-                trigger: '#ctf-data',
-                start: 'top 82%',
-            }
-        })
+        // gsap.from('#ctf-data', {
+        //     x: -300,
+        //     duration: 1.2,
+        //     scrollTrigger: {
+        //         trigger: '#ctf-data',
+        //         start: 'top 82%',
+        //     }
+        // })
 
         gsap.from('#assets-ctf', {
             opacity: 0,

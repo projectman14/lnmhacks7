@@ -12,14 +12,14 @@ gsap.registerPlugin(ScrollTrigger);
 const About = ({aboutRef}) => {
 
     useGSAP(() => {
-        gsap.from('#about-data', {
-            x: -300,
-            duration: 1.2,
-            scrollTrigger: {
-                trigger: '#about-data',
-                start: 'top 82%',
-            }
-        })
+        // gsap.from('#about-data', {
+        //     x: -300,
+        //     duration: 1.2,
+        //     scrollTrigger: {
+        //         trigger: '#about-data',
+        //         start: 'top 82%',
+        //     }
+        // })
 
         gsap.from('#asset-about-diamond', {
             opacity : 0,

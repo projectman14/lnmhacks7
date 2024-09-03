@@ -7,6 +7,7 @@ import { useRef } from 'react'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Helmet } from 'react-helmet';
+import Faq from './pages/Faq'
 gsap.registerPlugin(useGSAP);
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   const aboutRef = useRef(null);
   const ctfRef = useRef(null);
   const venueRef = useRef(null);
+  const faqRef = useRef(null);
 
   useGSAP(() => {
     setTimeout(() => {
@@ -30,10 +32,11 @@ function App() {
         <title>LnmHacks 7.0</title>
         <meta name="description" content="Welcome to the official home page of LnmHacks 6.0" />
       </Helmet>
-      <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} />
+      <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef}/>
       <About aboutRef={aboutRef} />
       <Ctf ctfRef={ctfRef} />
       <Venue venueRef={venueRef} />
+      <Faq faqRef={faqRef}/>
     </div>
   )
 }
