@@ -27,7 +27,7 @@ const Navbar = ({ aboutRef, ctfRef, venueRef }) => {
         },
         {
           y: 0,
-          duration: 3.5,
+          duration: 2.5,
           ease: "power1.inOut",
           scale: 1,
           filter: 'blur(0px)'
@@ -36,7 +36,7 @@ const Navbar = ({ aboutRef, ctfRef, venueRef }) => {
 
       tl.to('#logo', {
         x: 0,
-        duration: 2
+        duration: 1
       })
 
       setTimeout(() => {
@@ -46,9 +46,9 @@ const Navbar = ({ aboutRef, ctfRef, venueRef }) => {
           ease: 'power1.in',
           filter: 'blur(0px)'
         })
-      }, 4500)
+      }, 2600)
 
-    }, 3000)
+    }, 2600)
   }, [])
 
   return (

@@ -39,7 +39,7 @@ const Hero = ({ aboutRef, ctfRef, venueRef }) => {
             y: "-=500",
             rotation: "-10",
             opacity: 0,
-            duration: 2,
+            duration: 1,
             ease: "power1.in",
             display: 'none'
         });
@@ -64,7 +64,7 @@ const Hero = ({ aboutRef, ctfRef, venueRef }) => {
                 yoyo: true,      
                 ease: 'power1.inOut'  
             });
-        }, 7500)
+        }, 4600)
     }, [])
 
     return (
