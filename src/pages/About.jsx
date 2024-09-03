@@ -46,8 +46,8 @@ const About = ({aboutRef}) => {
                     </div>
 
                 </div>
-                <div className='flex items-center h-full mt-[7rem] ml-36' id='asset-about-diamond'>
-                    <img className='' src={Aboutimg} />
+                <div className={`flex items-center h-full mt-[7rem] ml-36 ${window.screen.width >= 1300 ? '' : 'mt-[11rem]'}`} id='asset-about-diamond'>
+                    <img className='hover:scale-105 hover:transform hover:rotate-6 transition-transform duration-500 ease-in-out' src={Aboutimg}/>
                 </div>
             </div>
         </div>

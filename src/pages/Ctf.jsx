@@ -10,7 +10,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-const Ctf = ({ctfRef}) => {
+const Ctf = ({ ctfRef }) => {
 
     useGSAP(() => {
         gsap.from('#ctf-data', {
@@ -23,7 +23,7 @@ const Ctf = ({ctfRef}) => {
         })
 
         gsap.from('#assets-ctf', {
-            opacity : 0,
+            opacity: 0,
             duration: 1.5,
             scrollTrigger: {
                 trigger: '#assets-ctf',
@@ -33,7 +33,7 @@ const Ctf = ({ctfRef}) => {
     }, [])
     return (
         <div
-            className="bg-cover bg-center bg-no-repeat h-screen w-screen bg-[#282729] overflow-hidden"
+            className="bg-cover bg-center bg-no-repeat h-full w-screen bg-[#282729] overflow-hidden"
             style={{ backgroundImage: `url(${background})` }}
             ref={ctfRef}
         >
@@ -47,21 +47,22 @@ const Ctf = ({ctfRef}) => {
                         <div className="text-[#4DC081] font-Handjet text-[3.2rem] font-extrabold mt-[1.5rem] tracking-widest">
                             CTF
                         </div>
-                        <div className="flex mt-6 ">
-                            <h3 className="text-[#FFFFFF] font-IBM-PLEX-MONO text-[2.01rem] mt-[0.8rem] tracking-wider max-w-[40rem]">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        <div className="flex mt-6">
+                            <h3 className="text-[#FFFFFF] font-IBM-PLEX-MONO text-[2.01rem] mt-[0.8rem] tracking-wider max-w-[52rem]">
+                                Building on the remarkable success of last year, which saw over 350 teams and more than 800 participants from 6 countries and with a prize pool of INR 20,000 last year, we aim to raise the stakes this time around.
+                                Our mission is to engage beginners and challenge seasoned veterans alike with innovative questions.
                             </h3>
                         </div>
                     </div>
                 </div>
-                <div className="ml-[8rem] -mt-16" id='assets-ctf'>
+                <div className={`ml-[8rem] ${window.screen.width >= 1300 ? '' : 'max-w-[20rem]'}`} id='assets-ctf'>
                     <img
                         src={meteor}
-                        className="scale-[0.7] translate-x-[20rem]"
+                        className={`scale-[0.7] translate-x-[20rem] ${window.screen.width >= 1300 ? '' : 'translate-x-[7rem] translate-y-[2rem]'}`}
                     />
                     <img
                         src={ctf}
-                        className="scale-[0.8] -mt-16 ml-4"
+                        className={`scale-[0.8] -mt-16 ml-4 ${window.screen.width >= 1300 ? '' : 'mt-4 translate-x-[-3rem] scale-110'}`}
                     />
                 </div>
             </div>
