@@ -40,7 +40,7 @@ const Ctf = ({ ctfRef }) => {
             <div className="flex mx-24 mt-16 justify-between">
                 <div className="flex flex-col">
                     <div className="flex  items-center space-x-11">
-                        <TopicButton className={'text-xl font-normal tracking-wider'} text={'Topic#3-CTF'} />
+                        <TopicButton className={'text-xl font-normal tracking-wider'} text={'Topic#2-CTF'} />
                         <img src={flag} className="scale-90 mt-2" />
                     </div>
                     <div className="-ml-5" id='ctf-data'>

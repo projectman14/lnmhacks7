@@ -16,7 +16,7 @@ const Venue = ({ venueRef }) => {
             >
                 <div className='flex flex-col mx-24 mt-16'>
                     <div className='flex'>
-                        <TopicButton className={'text-xl font-normal tracking-wider h-12'} text={'Topic#7-Venue'} />
+                        <TopicButton className={'text-xl font-normal tracking-wider h-12'} text={'Topic#3-Venue'} />
                         <img src={Venueimg} className='scale-75 ml-12 -mt-1' />
                     </div>
                     <div className='flex flex-col -ml-4' >

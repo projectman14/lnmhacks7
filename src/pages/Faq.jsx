@@ -12,7 +12,7 @@ const Faq = ({faqRef}) => {
             <div className='flex justify-between mx-24'>
                 <div className='flex flex-col'>
                     <div className='mt-16'>
-                        <TopicButton className={'text-xl font-normal tracking-wider h-12 w-48'} text={'Topic#6-FAQS'} />
+                        <TopicButton className={'text-xl font-normal tracking-wider h-12 w-48'} text={'Topic#4-FAQS'} />
                     </div>
                     <div className='flex -ml-5'>
                         <h1 className='text-[#4DC081] font-Handjet text-[3rem] font-extrabold mt-[1.5rem] tracking-widest'>Ask Your Queries</h1>
@@ -23,15 +23,15 @@ const Faq = ({faqRef}) => {
                         <div className='relative flex flex-col mt-40 z-10 ml-28'>
                             <div>
                                 <h3 className='font-Public-sans font-medium text-xl'>Name</h3>
-                                <input type='text' className='rounded-lg bg-transparent mt-[0.1rem] border-[3px] border-black h-10 w-[28rem] font-Minecraft' />
+                                <input type='text' className='rounded-lg bg-transparent mt-[0.1rem] border-[3px] border-black h-10 w-[28rem] font-Minecraft pl-2 ' />
                             </div>
                             <div className='mt-6'>
                                 <h3 className='font-Public-sans font-medium text-xl'>Email</h3>
-                                <input type='email' className='rounded-lg bg-transparent mt-[0.1rem] border-[3px] border-black h-10 w-[28rem] font-sans' />
+                                <input type='email' className='rounded-lg bg-transparent mt-[0.1rem] border-[3px] border-black h-10 w-[28rem] font-Minecraft pl-2 ' />
                             </div>
                             <div className='mt-6'>
                                 <h3 className='font-Public-sans font-medium text-xl'>Questions/Query</h3>
-                                <textarea className='rounded-xl bg-transparent border-[3px] mt-[0.1rem] border-black h-40 w-[28rem] font-sans' />
+                                <textarea className='rounded-xl bg-transparent border-[3px] mt-[0.1rem] border-black h-40 w-[28rem] font-Minecraft pl-2 pt-2' />
                             </div>
                         </div>
                     </div>
