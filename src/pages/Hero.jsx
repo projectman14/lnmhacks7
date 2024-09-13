@@ -89,6 +89,7 @@ const Hero = ({ aboutRef, ctfRef, venueRef, faqRef }) => {
                     <div>
                         <h3 className='text-[#EE3A23] font-Minecraft text-[4rem] font-medium tracking-widest animation-opacity animation-blink'>Coming Soon</h3>
                     </div>
+                    <TopicButton text={'Pre-Register Now'} className={'text-lg font-normal tracking-wider ml-8 mt-4 w-56 cursor-pointer z-10'}/>
                     <div className='flex mx-6 mt-4'>
                         {/* <TopicButton className={'text-xl font-normal tracking-wider animation-opacity'} text={'Learn more'} />
                         <TopicButton className={'text-xl font-normal tracking-wider ml-16 pr-8 animation-opacity'} text={`Media`} />

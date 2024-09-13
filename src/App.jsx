@@ -29,7 +29,7 @@ function App() {
   return (
     <div className='overflow-x-hidden Scrollbar'>
       <Helmet>
-        <title>LnmHacks 7.0</title>
+        <title>LNMHacks 7.0</title>
         <meta name="description" content="Welcome to the official home page of LnmHacks 6.0" />
       </Helmet>
       <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef}/>
