@@ -7,9 +7,9 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '..
 
 const Faq = ({faqRef}) => {
     return (
-        <div ref={faqRef} className="bg-cover bg-center bg-no-repeat h-[110vh] w-screen bg-[#282729] relative overflow-hidden"
+        <div ref={faqRef} className="bg-cover bg-center bg-no-repeat h-[110vh] w-screen bg-[#282729] relative overflow-hidden max-w-[1536px] 2xl:max-h-[864px]"
             style={{ backgroundImage: `url(${background})` }}>
-            <div className='flex justify-between mx-24'>
+            <div className='flex justify-between mx-24 mt-8'>
                 <div className='flex flex-col'>
                     <div className='mt-16'>
                         <TopicButton className={'text-xl font-normal tracking-wider h-12 w-48'} text={'Topic#4-FAQS'} />

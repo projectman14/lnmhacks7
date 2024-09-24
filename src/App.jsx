@@ -8,9 +8,12 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Helmet } from 'react-helmet';
 import Faq from './pages/Faq'
+import Schedule from './pages/Schedule'
 gsap.registerPlugin(useGSAP);
 
 function App() {
+  console.log(window.screen.width);
+  console.log(window.screen.height);
 
   const aboutRef = useRef(null);
   const ctfRef = useRef(null);
@@ -27,16 +30,19 @@ function App() {
   }, [])
 
   return (
-    <div className='overflow-x-hidden Scrollbar'>
-      <Helmet>
-        <title>LNMHacks 7.0</title>
-        <meta name="description" content="Welcome to the official home page of LnmHacks 6.0" />
-      </Helmet>
-      <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef}/>
-      <About aboutRef={aboutRef} />
-      <Ctf ctfRef={ctfRef} />
-      <Venue venueRef={venueRef} />
-      <Faq faqRef={faqRef}/>
+    <div className="bg-black min-h-screen flex justify-center">
+      <div className="w-full max-w-[1536px] overflow-x-hidden Scrollbar">
+        <Helmet>
+          <title>LNMHacks 7.0</title>
+          <meta name="description" content="Welcome to the official home page of LnmHacks 6.0" />
+        </Helmet>
+        <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} />
+        <About aboutRef={aboutRef} />
+        <Ctf ctfRef={ctfRef} />
+        <Schedule />
+        <Venue venueRef={venueRef} />
+        <Faq faqRef={faqRef} />
+      </div>
     </div>
   )
 }
