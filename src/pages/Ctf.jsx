@@ -13,14 +13,6 @@ gsap.registerPlugin(ScrollTrigger);
 const Ctf = ({ ctfRef }) => {
 
     useGSAP(() => {
-        // gsap.from('#ctf-data', {
-        //     x: -300,
-        //     duration: 1.2,
-        //     scrollTrigger: {
-        //         trigger: '#ctf-data',
-        //         start: 'top 82%',
-        //     }
-        // })
 
         gsap.from('#assets-ctf', {
             opacity: 0,
@@ -33,7 +25,7 @@ const Ctf = ({ ctfRef }) => {
     }, [])
     return (
         <div
-            className="bg-cover bg-center bg-no-repeat h-full w-screen bg-[#282729] overflow-hidden"
+            className="bg-cover bg-center bg-no-repeat h-[110vh] w-screen bg-[#282729] overflow-hidden max-w-[1536px] 2xl:max-h-[864px] select-none"
             style={{ backgroundImage: `url(${background})` }}
             ref={ctfRef}
         >

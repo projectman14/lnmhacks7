@@ -3,14 +3,13 @@ import TopicButton from '../components/TopicButton';
 import background from '/bg.png';
 import Venueimg from '/Venue-img.svg'
 import Location from '../components/Location';
-import venimg from '/Venue-bg.svg'
 import LNMIIT from '/LNMIIT.png';
 
 const Venue = ({ venueRef }) => {
     return (
         <>
             <div
-                className="bg-cover bg-center bg-no-repeat h-[110vh] 2xl:h-[130vh] w-screen bg-[#282729] overflow-hidden"
+                className="bg-cover bg-center bg-no-repeat h-[130vh] w-screen bg-[#282729] overflow-hidden 2xl:max-w-[1536px] 2xl:max-h-[864px]"
                 style={{ backgroundImage: `url(${background})` }}
                 ref={venueRef}
             >
@@ -19,7 +18,7 @@ const Venue = ({ venueRef }) => {
                         <TopicButton className={'text-xl font-normal tracking-wider h-12'} text={'Topic#3-Venue'} />
                         <img src={Venueimg} className='scale-75 ml-12 -mt-1' />
                     </div>
-                    <div className='flex flex-col -ml-4' >
+                    <div className='flex flex-col -ml-4 relative h-[86rem] overflow-hidden' >
                         <div>
                             <h1 className='text-[#4DC081] font-Handjet text-[3rem] font-extrabold mt-[1.5rem] tracking-widest'>Venue</h1>
                         </div>
