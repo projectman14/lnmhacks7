@@ -13,7 +13,7 @@ import Dinosaur from '../../public/dinosaur.svg'
 
 gsap.registerPlugin(useGSAP)
 
-const Hero = ({ aboutRef, ctfRef, venueRef, faqRef }) => {
+const Hero = ({ aboutRef, ctfRef, venueRef, faqRef , scheduleRef }) => {
     useGSAP(() => {
         gsap.to('.animation-blink', {
             opacity: 0,
@@ -30,10 +30,10 @@ const Hero = ({ aboutRef, ctfRef, venueRef, faqRef }) => {
     }
 
     return (
-        <div className="bg-cover bg-center bg-no-repeat h-[100vh] w-screen bg-[#282729] relative overflow-hidden 2xl:max-w-[1536px] 2xl:max-h-[874px]"
+        <div className="bg-cover bg-center bg-no-repeat h-[100vh] w-screen bg-[#282729] relative overflow-hidden 2xl:max-w-[1536px] 2xl:max-h-[874px] select-none"
             style={{ backgroundImage: `url(${background})` }}>
             <Suspense fallback={<div>Loading...</div>}>
-                <Navbar aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} />
+                <Navbar aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} scheduleRef={scheduleRef}/>
             </Suspense>
             <div className='flex mx-16 mt-20' id='hero'>
                 <div className='w-3/5 flex flex-col'>

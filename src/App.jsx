@@ -19,6 +19,7 @@ function App() {
   const ctfRef = useRef(null);
   const venueRef = useRef(null);
   const faqRef = useRef(null);
+  const scheduleRef = useRef(null);
 
   useGSAP(() => {
     setTimeout(() => {
@@ -36,10 +37,10 @@ function App() {
           <title>LNMHacks 7.0</title>
           <meta name="description" content="Welcome to the official home page of LnmHacks 6.0" />
         </Helmet>
-        <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} />
+        <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} scheduleRef={scheduleRef}/>
         <About aboutRef={aboutRef} />
         <Ctf ctfRef={ctfRef} />
-        <Schedule />
+        <Schedule scheduleRef={scheduleRef}/>
         <Venue venueRef={venueRef} />
         <Faq faqRef={faqRef} />
       </div>

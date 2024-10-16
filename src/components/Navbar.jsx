@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const Navbar = ({ aboutRef, ctfRef, venueRef, faqRef }) => {
+const Navbar = ({ aboutRef, ctfRef, venueRef, faqRef , scheduleRef}) => {
 
   return (
     <div className='flex flex-col lg:flex-row justify-between mx-4 lg:mx-16 relative z-10'>
@@ -12,7 +12,9 @@ const Navbar = ({ aboutRef, ctfRef, venueRef, faqRef }) => {
         <p className='font-IBM-PLEX-MONO text-base text-white mt-4 lg:mt-8 cursor-pointer hover:border-b-2 border-[#9CFFBE]' onClick={() => {
           aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
         }}>About</p>
-        <p className='font-IBM-PLEX-MONO text-base text-white ml-4 lg:ml-16 mt-4 lg:mt-8 cursor-pointer hover:border-b-2 border-[#9CFFBE]'>Schedule</p>
+        <p className='font-IBM-PLEX-MONO text-base text-white ml-4 lg:ml-16 mt-4 lg:mt-8 cursor-pointer hover:border-b-2 border-[#9CFFBE]' onClick={() => {
+          scheduleRef.current?.scrollIntoView({ behavior: 'smooth' });
+        }}>Schedule</p>
         <p className='font-IBM-PLEX-MONO text-base text-white ml-4 lg:ml-16 mt-4 lg:mt-8 cursor-pointer hover:border-b-2 border-[#9CFFBE]' onClick={() => {
           ctfRef.current?.scrollIntoView({ behavior: 'smooth' });
         }}>CTF</p>
