@@ -76,26 +76,29 @@ const raiseQuery = async (req, res) => {
         const payload = {
             name,
             email,
-            query,
-            syncedToSheets: false,  // Add this flag
+            query
         };
 
         const question = new Query(payload);
         const saveQuestion = await question.save();
 
-        // Remove direct sheets sync from here
-        // Let the change stream handle it
+        // Initialize Google Sheets sync
+        const sheetsSync = new GoogleSheetsSync();
+        await sheetsSync.initialize();
+
+        // Append to Google Sheets
+        await sheetsSync.appendRow([name, email, query]);
 
         return res.status(200).json({
             message: "Query Submitted Successfully",
             data: saveQuestion,
-            success: true,
+            success: true
         });
     } catch (err) {
-        console.error('Error in raiseQuery:', err.message);
+        console.error('Error in raiseQuery:', err);
         res.status(400).json({
-            message: err.message || 'An error occurred while raising the query',
-            success: false,
+            message: err.message || err,
+            success: false
         });
     }
 };
