@@ -3,14 +3,14 @@ import { MongoClient } from 'mongodb';
 import Query from "../models/queryModel.js";
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { promises as fs } from 'fs';  // Import fs with promises
+import dotenv from 'dotenv';  
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Configure Google Sheets API
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
-const CREDENTIALS_PATH = path.join(__dirname, '../credentials.json');
 
 class GoogleSheetsSync {
     constructor() {
@@ -21,27 +21,23 @@ class GoogleSheetsSync {
 
     async initialize() {
         try {
-            // Read credentials file using fs.promises
-            const credentialsContent = await fs.readFile(CREDENTIALS_PATH, 'utf8');
-            const credentials = JSON.parse(credentialsContent);
-            
+            // Read credentials from environment variable
+            const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS_JSON);
+
             this.auth = new google.auth.GoogleAuth({
                 credentials,
                 scopes: SCOPES,
             });
 
             this.sheets = google.sheets({ version: 'v4', auth: this.auth });
-            
+
             // Test the connection
-            await this.sheets.spreadsheets.get({
-                spreadsheetId: this.spreadsheetId
-            });
-            
+            await this.sheets.spreadsheets.get({ spreadsheetId: this.spreadsheetId });
             console.log('Successfully connected to Google Sheets');
         } catch (error) {
             console.error('Error initializing Google Sheets:', error.message);
             if (error.message.includes('credentials')) {
-                console.error('Please check if credentials.json exists and is valid');
+                console.error('Please check if GOOGLE_CREDENTIALS_JSON is valid');
             }
             if (error.message.includes('spreadsheetId')) {
                 console.error('Please check if GOOGLE_SHEET_ID in .env is correct');
@@ -81,7 +77,7 @@ const raiseQuery = async (req, res) => {
             name,
             email,
             query,
-            syncedToSheets: false  // Add this flag
+            syncedToSheets: false,  // Add this flag
         };
 
         const question = new Query(payload);
@@ -93,13 +89,13 @@ const raiseQuery = async (req, res) => {
         return res.status(200).json({
             message: "Query Submitted Successfully",
             data: saveQuestion,
-            success: true
+            success: true,
         });
     } catch (err) {
-        console.error('Error in raiseQuery:', err);
+        console.error('Error in raiseQuery:', err.message);
         res.status(400).json({
-            message: err.message || err,
-            success: false
+            message: err.message || 'An error occurred while raising the query',
+            success: false,
         });
     }
 };
@@ -121,14 +117,15 @@ const setupChangeStream = async () => {
                     console.log('Successfully synced new document to Google Sheets');
                 }
             } catch (error) {
-                console.error('Error processing change stream event:', error);
+                console.error('Error processing change stream event:', error.message);
             }
         });
 
         console.log('Change stream is set up and watching for changes');
     } catch (error) {
-        console.error('Error setting up change stream:', error);
+        console.error('Error setting up change stream:', error.message);
         throw error;
     }
 };
+
 export { raiseQuery, setupChangeStream };
