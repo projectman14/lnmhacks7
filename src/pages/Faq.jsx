@@ -1,11 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import background from '../../public/bg.png';
 import TopicButton from '../components/TopicButton';
 import experiment from '../../public/experiment.svg';
 import faqBg from '../../public/faq.svg';
+import axios from 'axios'; 
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '../components/Accordion';
+import toast, { Toaster } from 'react-hot-toast';
 
-const Faq = ({faqRef}) => {
+const Faq = ({ faqRef }) => {
+
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [query, setQuery] = useState();
+
+    const submitQuery = async () => {
+        const payload = {
+            name,
+            email,
+            query
+        };
+
+        console.log(payload);
+
+        try {
+            if(name == '' || email == '' || query == ''){
+                toast.error("Feilds Incomplete");
+                return;
+            }
+            const response = await axios.post(import.meta.env.VITE_BACKEND_URL , payload);
+            console.log(response);
+
+            if(response.data.success == true){
+                toast.success(response?.data?.message);
+                setEmail('');
+                setName('');
+                setQuery('');
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    }
     return (
         <div ref={faqRef} className="bg-cover bg-center bg-no-repeat h-[110vh] w-screen bg-[#282729] relative overflow-hidden max-w-[1536px] 2xl:max-h-[864px]"
             style={{ backgroundImage: `url(${background})` }}>
@@ -23,15 +57,32 @@ const Faq = ({faqRef}) => {
                         <div className='relative flex flex-col mt-40 z-10 ml-28'>
                             <div>
                                 <h3 className='font-Public-sans font-medium text-xl'>Name</h3>
-                                <input type='text' className='rounded-lg bg-transparent mt-[0.1rem] border-[3px] border-black h-10 w-[28rem] font-Minecraft pl-2 ' />
+                                <input
+                                    type='text'
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    className='rounded-lg bg-transparent mt-[0.1rem] border-[3px] border-black h-10 w-[28rem] font-IBM-PLEX-MONO pl-2'
+                                />
                             </div>
                             <div className='mt-6'>
                                 <h3 className='font-Public-sans font-medium text-xl'>Email</h3>
-                                <input type='email' className='rounded-lg bg-transparent mt-[0.1rem] border-[3px] border-black h-10 w-[28rem] font-Minecraft pl-2 ' />
+                                <input
+                                    type='email'
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    className='rounded-lg bg-transparent mt-[0.1rem] border-[3px] border-black h-10 w-[28rem] font-IBM-PLEX-MONO pl-2'
+                                />
                             </div>
                             <div className='mt-6'>
                                 <h3 className='font-Public-sans font-medium text-xl'>Questions/Query</h3>
-                                <textarea className='rounded-xl bg-transparent border-[3px] mt-[0.1rem] border-black h-40 w-[28rem] font-Minecraft pl-2 pt-2' />
+                                <textarea
+                                    value={query}
+                                    onChange={(e) => setQuery(e.target.value)}
+                                    className='rounded-xl bg-transparent border-[3px] mt-[0.1rem] border-black h-40 w-[28rem] font-IBM-PLEX-MONO pl-2 pt-2'
+                                />
+                            </div>
+                            <div className='mt-2 flex justify-end mr-1'>
+                                <button className='rounded-md bg-[#4DC081] h-8 w-24 font-Minecraft text-lg pb-1' onClick={submitQuery}>SUBMIT</button>
                             </div>
                         </div>
                     </div>
@@ -119,6 +170,7 @@ const Faq = ({faqRef}) => {
                     </div>
                 </div>
             </div>
+            <Toaster />
         </div>
     );
 };
