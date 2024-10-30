@@ -3,14 +3,22 @@ import { MongoClient } from 'mongodb';
 import Query from "../models/queryModel.js";
 import path from 'path';
 import { fileURLToPath } from 'url';
+<<<<<<< HEAD
 import dotenv from 'dotenv';  
 dotenv.config();
+=======
+import { promises as fs } from 'fs';  // Import fs with promises
+>>>>>>> 8ffcac4 (query backend done)
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Configure Google Sheets API
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
+<<<<<<< HEAD
+=======
+const CREDENTIALS_PATH = path.join(__dirname, '../credentials.json');
+>>>>>>> 8ffcac4 (query backend done)
 
 class GoogleSheetsSync {
     constructor() {
@@ -21,23 +29,43 @@ class GoogleSheetsSync {
 
     async initialize() {
         try {
+<<<<<<< HEAD
             // Read credentials from environment variable
             const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS_JSON);
 
+=======
+            // Read credentials file using fs.promises
+            const credentialsContent = await fs.readFile(CREDENTIALS_PATH, 'utf8');
+            const credentials = JSON.parse(credentialsContent);
+            
+>>>>>>> 8ffcac4 (query backend done)
             this.auth = new google.auth.GoogleAuth({
                 credentials,
                 scopes: SCOPES,
             });
 
             this.sheets = google.sheets({ version: 'v4', auth: this.auth });
+<<<<<<< HEAD
 
             // Test the connection
             await this.sheets.spreadsheets.get({ spreadsheetId: this.spreadsheetId });
+=======
+            
+            // Test the connection
+            await this.sheets.spreadsheets.get({
+                spreadsheetId: this.spreadsheetId
+            });
+            
+>>>>>>> 8ffcac4 (query backend done)
             console.log('Successfully connected to Google Sheets');
         } catch (error) {
             console.error('Error initializing Google Sheets:', error.message);
             if (error.message.includes('credentials')) {
+<<<<<<< HEAD
                 console.error('Please check if GOOGLE_CREDENTIALS_JSON is valid');
+=======
+                console.error('Please check if credentials.json exists and is valid');
+>>>>>>> 8ffcac4 (query backend done)
             }
             if (error.message.includes('spreadsheetId')) {
                 console.error('Please check if GOOGLE_SHEET_ID in .env is correct');
@@ -77,7 +105,11 @@ const raiseQuery = async (req, res) => {
             name,
             email,
             query,
+<<<<<<< HEAD
             syncedToSheets: false,  // Add this flag
+=======
+            syncedToSheets: false  // Add this flag
+>>>>>>> 8ffcac4 (query backend done)
         };
 
         const question = new Query(payload);
@@ -89,6 +121,7 @@ const raiseQuery = async (req, res) => {
         return res.status(200).json({
             message: "Query Submitted Successfully",
             data: saveQuestion,
+<<<<<<< HEAD
             success: true,
         });
     } catch (err) {
@@ -96,6 +129,15 @@ const raiseQuery = async (req, res) => {
         res.status(400).json({
             message: err.message || 'An error occurred while raising the query',
             success: false,
+=======
+            success: true
+        });
+    } catch (err) {
+        console.error('Error in raiseQuery:', err);
+        res.status(400).json({
+            message: err.message || err,
+            success: false
+>>>>>>> 8ffcac4 (query backend done)
         });
     }
 };
@@ -117,15 +159,27 @@ const setupChangeStream = async () => {
                     console.log('Successfully synced new document to Google Sheets');
                 }
             } catch (error) {
+<<<<<<< HEAD
                 console.error('Error processing change stream event:', error.message);
+=======
+                console.error('Error processing change stream event:', error);
+>>>>>>> 8ffcac4 (query backend done)
             }
         });
 
         console.log('Change stream is set up and watching for changes');
     } catch (error) {
+<<<<<<< HEAD
         console.error('Error setting up change stream:', error.message);
         throw error;
     }
 };
 
 export { raiseQuery, setupChangeStream };
+=======
+        console.error('Error setting up change stream:', error);
+        throw error;
+    }
+};
+export { raiseQuery, setupChangeStream };
+>>>>>>> 8ffcac4 (query backend done)
