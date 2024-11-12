@@ -39,7 +39,7 @@ const About = ({ aboutRef }) => {
                     <div className='flex flex-col max-w-[48rem] -ml-5' id='about-data'>
                         <h1 className='text-[#4DC081] font-Handjet text-[3rem] font-extrabold mt-[1.5rem] tracking-widest'>About LNM hacks</h1>
                         <h2 className='text-[#FFFFFF] font-IBM-PLEX-MONO text-[2rem] mt-[1.5rem] tracking-wide'>
-                            Prepare for an innovation extravaganza at LNM Hacks, the focal point of Tech-Fest, Plinth! Dive into the <span className='text-[#4DC081]'> 48-hour </span> excitement of LNMHacks 7.0, where coding novices and seasoned pros come together for a transformative journey. Unleash your genius and shape your coding evolution!
+                            Prepare for an innovation extravaganza at LNM Hacks, the focal point of Tech-Fest, Plinth! Dive into the <span className='text-[#4DC081]'> 72-hour </span> excitement of LNMHacks 7.0, where coding novices and seasoned pros come together for a transformative journey. Unleash your genius and shape your coding evolution!
                         </h2>
                     </div>
                 </div>
