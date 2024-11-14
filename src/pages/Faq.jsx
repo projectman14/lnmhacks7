@@ -12,6 +12,7 @@ const Faq = ({ faqRef }) => {
     const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [query, setQuery] = useState();
+    const [btnStatus , setBtnStatus] = useState("SUBMIT");
 
     const submitQuery = async () => {
         const payload = {
@@ -23,10 +24,20 @@ const Faq = ({ faqRef }) => {
         console.log(payload);
 
         try {
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
             if(name == '' || email == '' || query == ''){
                 toast.error("Feilds Incomplete");
                 return;
             }
+
+            if (!emailRegex.test(email)) {
+                toast.error("Invalid email format");
+                return;
+            }
+
+            setBtnStatus("SUBMITTING");
             const response = await axios.post(import.meta.env.VITE_BACKEND_URL , payload);
             console.log(response);
 
@@ -35,9 +46,21 @@ const Faq = ({ faqRef }) => {
                 setEmail('');
                 setName('');
                 setQuery('');
+                setBtnStatus("SUBMITED✅")
+                setTimeout(()=>{
+                    setBtnStatus("SUBMIT");
+                } , 1000);
+            }else{
+                setBtnStatus("SUBMIT");
             }
+            
         } catch (err) {
             console.log(err);
+            setBtnStatus("SUBMIT");
+            setEmail('');
+            setName('');
+            setQuery('');
+            toast.error("SOME ERROR OCCURRED")
         }
     }
     return (
@@ -46,7 +69,7 @@ const Faq = ({ faqRef }) => {
             <div className='flex justify-between mx-24 mt-8'>
                 <div className='flex flex-col'>
                     <div className='mt-16'>
-                        <TopicButton className={'text-xl font-normal tracking-wider h-12 w-48'} text={'Topic#4-FAQS'} />
+                        <TopicButton className={'text-xl font-normal tracking-wider h-12 w-48'} text={'Topic#5-FAQS'} />
                     </div>
                     <div className='flex -ml-5'>
                         <h1 className='text-[#4DC081] font-Handjet text-[3rem] font-extrabold mt-[1.5rem] tracking-widest'>Ask Your Queries</h1>
@@ -82,7 +105,7 @@ const Faq = ({ faqRef }) => {
                                 />
                             </div>
                             <div className='mt-2 flex justify-end mr-1'>
-                                <button className='rounded-md bg-[#4DC081] h-8 w-24 font-Minecraft text-lg pb-1' onClick={submitQuery}>SUBMIT</button>
+                                <button className='rounded-md bg-[#4DC081] h-8 w-[7.5rem] font-Minecraft text-lg pb-1' onClick={submitQuery}>{btnStatus}</button>
                             </div>
                         </div>
                     </div>
