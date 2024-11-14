@@ -28,10 +28,10 @@ const Schedule = ({scheduleRef}) => {
                 >
                     <div className='flex flex-col'>
                         <div className='flex mt-[14.4rem] z-10 ml-28'>
-                            <h3 className='font-Pixeboy text-[1.7rem]  cursor-pointer'>HACKS</h3>
-                            <h3 className='font-Pixeboy text-[1.7rem] ml-7 font-extralight cursor-pointer'>GOT</h3>
-                            <h3 className='font-Pixeboy text-[1.7rem] ml-7 font-extralight cursor-pointer'>IT</h3>
-                            <h3 className='font-Pixeboy text-[1.7rem] ml-7 font-extralight cursor-pointer'>COVERED</h3>
+                            <h3 className='font-Pixeboy text-[1.7rem]  '>HACKS</h3>
+                            <h3 className='font-Pixeboy text-[1.7rem] ml-7 font-extralight '>GOT</h3>
+                            <h3 className='font-Pixeboy text-[1.7rem] ml-7 font-extralight '>IT</h3>
+                            <h3 className='font-Pixeboy text-[1.7rem] ml-7 font-extralight '>COVERED</h3>
                         </div>
                         <div className='flex'>
                             <div>

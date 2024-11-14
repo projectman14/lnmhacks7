@@ -33,7 +33,7 @@ const Ctf = ({ ctfRef }) => {
                 <div className="flex flex-col">
                     <div className="flex  items-center space-x-11">
                         <TopicButton className={'text-xl font-normal tracking-wider'} text={'Topic#2-CTF'} />
-                        <img src={flag} className="scale-90 mt-2" />
+                        <img src={flag} className="scale-90 mt-2" onClick={()=>window.open("https://ctf.lnmhacks7.tech", "_blank")}/>
                     </div>
                     <div className="-ml-5" id='ctf-data'>
                         <div className="text-[#4DC081] font-Handjet text-[3.2rem] font-extrabold mt-[1.5rem] tracking-widest">
