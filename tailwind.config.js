@@ -10,9 +10,11 @@ export default {
         'Minecraft': ['Minecraft', 'sans-serif'],
         'IBM-PLEX-MONO': ["IBM Plex Mono", "monospace"],
         'Handjet': ["Handjet", 'sans-serif'],
+        'Eight-Bit-Dragon': ["EightBitDragon", 'sans-serif'],
         'Rajdhani': ["Rajdhani", 'sans-serif'],
         'Pixeboy': ['Pixeboy', 'sans-serif'],
-        'Public-sans' : ["Public Sans", 'sans-serif']
+        'Public-sans' : ["Public Sans", 'sans-serif'] ,
+        'Futura-Black' : ['FuturaBlack', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {

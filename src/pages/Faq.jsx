@@ -69,7 +69,7 @@ const Faq = ({ faqRef }) => {
             <div className='flex justify-between mx-24 mt-8'>
                 <div className='flex flex-col'>
                     <div className='mt-16'>
-                        <TopicButton className={'text-xl font-normal tracking-wider h-12 w-48'} text={'Topic#5-FAQS'} />
+                        <TopicButton className={'text-xl font-normal tracking-wider h-12 w-48'} text={'Topic#4-FAQS'} />
                     </div>
                     <div className='flex -ml-5'>
                         <h1 className='text-[#4DC081] font-Handjet text-[3rem] font-extrabold mt-[1.5rem] tracking-widest'>Ask Your Queries</h1>
@@ -114,7 +114,7 @@ const Faq = ({ faqRef }) => {
                     <div>
                         <h3 className='text-white font-Minecraft text-3xl max-w-72'>FREQUENTLY ASKED QUESTIONS</h3>
                     </div>
-                    <div className='text-[#CFE7CD] font-Public-sans w-full mt-12'>
+                    <div className='text-[#CFE7CD] font-Public-sans w-[35rem] mt-12'>
                         <Accordion type="single" collapsible className="w-full text-left">
                             <AccordionItem value="item-1">
                                 <AccordionTrigger className="text-base">

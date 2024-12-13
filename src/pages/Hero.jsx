@@ -10,6 +10,7 @@ import BracketLeft from '../../public/bracket_left.png'
 import Coin from '../../public/coin.png'
 import BracketRight from '../../public/bracket_right.png'
 import Dinosaur from '../../public/dinosaur.svg'
+import bg_new from '../../public/bg_new.png'
 
 gsap.registerPlugin(useGSAP)
 
@@ -31,7 +32,7 @@ const Hero = ({ aboutRef, ctfRef, venueRef, faqRef , scheduleRef }) => {
 
     return (
         <div className="bg-cover bg-center bg-no-repeat h-[100vh] w-screen bg-[#282729] relative overflow-hidden 2xl:max-w-[1536px] 2xl:max-h-[874px] select-none"
-            style={{ backgroundImage: `url(${background})` }}>
+            style={{ backgroundImage: `url(${bg_new})` }}>
             <Suspense fallback={<div>Loading...</div>}>
                 <Navbar aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} scheduleRef={scheduleRef}/>
             </Suspense>
