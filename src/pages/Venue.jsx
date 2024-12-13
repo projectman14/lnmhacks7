@@ -22,7 +22,7 @@ const Venue = ({ venueRef }) => {
                         <div>
                             <h1 className='text-[#4DC081] font-Handjet text-[3rem] font-extrabold mt-[1.5rem] tracking-widest'>Venue</h1>
                         </div>
-                        <div className='ml-[2rem]'>
+                        <div className='ml-[0rem] 2xl:ml-[2rem]'>
                             <Location />
                         </div>
                         <div className='absolute z-10 mt-28 ml-12 2xl:mt-40 2xl:ml-[9.5rem]'>
