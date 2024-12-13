@@ -19,11 +19,12 @@ const Navbar = ({ aboutRef, ctfRef, venueRef, faqRef , scheduleRef}) => {
           scheduleRef.current?.scrollIntoView({ behavior: 'smooth' });
         }}>Schedule</p>
         <p className='font-IBM-PLEX-MONO text-base text-white ml-4 lg:ml-16 mt-4 lg:mt-8 cursor-pointer hover:border-b-2 border-[#9CFFBE]' onClick={() => {
-          venueRef.current?.scrollIntoView({ behavior: 'smooth' });
-        }}>Venue</p>
-        <p className='font-IBM-PLEX-MONO text-base text-white ml-4 lg:ml-16 mt-4 lg:mt-8 cursor-pointer hover:border-b-2 border-[#9CFFBE]' onClick={() => {
           faqRef.current?.scrollIntoView({ behavior: 'smooth' });
         }}>FAQs</p>
+        <p className='font-IBM-PLEX-MONO text-base text-white ml-4 lg:ml-16 mt-4 lg:mt-8 cursor-pointer hover:border-b-2 border-[#9CFFBE]' onClick={() => {
+          venueRef.current?.scrollIntoView({ behavior: 'smooth' });
+        }}>Venue</p>
+        
         
       </div>
     </div>

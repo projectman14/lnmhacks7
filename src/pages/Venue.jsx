@@ -9,23 +9,23 @@ const Venue = ({ venueRef }) => {
     return (
         <>
             <div
-                className="bg-cover bg-center bg-no-repeat h-[130vh] w-screen bg-[#282729] overflow-hidden 2xl:max-w-[1536px] 2xl:max-h-[864px]"
+                className="bg-cover bg-center bg-no-repeat h-[130vh] w-screen bg-[#282729] overflow-hidden 2xl:max-w-[1536px] 2xl:max-h-[68rem]"
                 style={{ backgroundImage: `url(${background})` }}
                 ref={venueRef}
             >
                 <div className='flex flex-col mx-24 mt-16'>
                     <div className='flex'>
-                        <TopicButton className={'text-xl font-normal tracking-wider h-12'} text={'Topic#4-Venue'} />
+                        <TopicButton className={'text-xl font-normal tracking-wider h-12'} text={'Topic#5-Venue'} />
                         <img src={Venueimg} className='scale-75 ml-12 -mt-1' />
                     </div>
                     <div className='flex flex-col -ml-4 relative h-[86rem] overflow-hidden' >
                         <div>
                             <h1 className='text-[#4DC081] font-Handjet text-[3rem] font-extrabold mt-[1.5rem] tracking-widest'>Venue</h1>
                         </div>
-                        <div className=''>
+                        <div className='ml-[2rem]'>
                             <Location />
                         </div>
-                        <div className='absolute z-10 mt-28 ml-12 2xl:mt-40 2xl:ml-32'>
+                        <div className='absolute z-10 mt-28 ml-12 2xl:mt-40 2xl:ml-[9.5rem]'>
                             <div className='flex items-center justify-between mt-[6rem]  max-w-[70rem] 2xl:max-w-[100rem] 2xl:mx-0 '>
                                 <div className='flex flex-col'>
                                     <h1 className='text-[#FFFFFF] font-Handjet font-bold tracking-wider text-[3rem] w-[20rem] leading-[3.1rem] max-w-[25rem]'>THE LNM INSTITUTE OF INFORMATION AND TECHNOLOGY </h1>

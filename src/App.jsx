@@ -9,6 +9,7 @@ import { useGSAP } from '@gsap/react';
 import { Helmet } from 'react-helmet';
 import Faq from './pages/Faq'
 import Schedule from './pages/Schedule'
+import Footer from './pages/Footer'
 gsap.registerPlugin(useGSAP);
 
 function App() {
@@ -35,14 +36,16 @@ function App() {
       <div className="w-full max-w-[1536px] overflow-x-hidden Scrollbar">
         <Helmet>
           <title>LNMHacks 7.0</title>
-          <meta name="description" content="Welcome to the official home page of LnmHacks 6.0" />
+          <meta name="description" content="Dive into the 72-hour excitement of LNMHacks 7.0, where coding novices and seasoned pros come together for a transformative journey." />
+          <link rel="icon" type="image/png" sizes="32x32" href="public/logoUpdated.png?v=1" />
         </Helmet>
-        <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} scheduleRef={scheduleRef}/>
+        <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} scheduleRef={scheduleRef} />
         <About aboutRef={aboutRef} />
         <Ctf ctfRef={ctfRef} />
-        <Schedule scheduleRef={scheduleRef}/>
-        <Venue venueRef={venueRef} />
+        <Schedule scheduleRef={scheduleRef} />
         <Faq faqRef={faqRef} />
+        <Venue venueRef={venueRef} />
+        <Footer aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} scheduleRef={scheduleRef} />
       </div>
     </div>
   )
