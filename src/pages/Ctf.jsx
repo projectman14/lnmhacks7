@@ -29,34 +29,37 @@ const Ctf = ({ ctfRef }) => {
             style={{ backgroundImage: `url(${background})` }}
             ref={ctfRef}
         >
-            <div className="flex mx-24 mt-16 justify-between">
+            <div className="flex flex-col lg:flex-row lg:mx-[6rem] mt-8 mx-[2rem]">
                 <div className="flex flex-col">
-                    <div className="flex  items-center space-x-11">
-                        <TopicButton className={'text-xl font-normal tracking-wider'} text={'Topic#2-CTF'} />
-                        <img src={flag} className="scale-90 mt-2 cursor-pointer" onClick={()=>window.open("https://ctf.lnmhacks7.tech", "_blank")}/>
+                    <div className="flex items-center mt-4 lg:ml-0 ml-5">
+                        <TopicButton className={'text-lg md:text-xl font-normal tracking-wider'} text={'Topic#2-CTF'} />
+                        <img src={flag} className="ml-9 md:ml-[4rem] h-12 md:h-16 -mt-[0.2rem] cursor-pointer" onClick={()=>window.open("https://ctf.lnmhacks7.tech", "_blank")}/>
                     </div>
-                    <div className="-ml-5" id='ctf-data'>
-                        <div className="text-[#4DC081] font-Handjet text-[3.2rem] font-extrabold mt-[1.5rem] tracking-widest">
+                    <div className="flex flex-col lg:max-w-[48rem] lg:-ml-5" id='ctf-data'>
+                        <h1 className="text-[#4DC081] font-Handjet lg:text-[3rem] font-extrabold mt-[1.5rem] tracking-widest text-[2.5rem]">
                             CTF
-                        </div>
-                        <div className="flex mt-6">
-                            <h3 className="text-[#FFFFFF] font-IBM-PLEX-MONO text-[2.01rem] mt-[0.8rem] tracking-wider max-w-[52rem]">
+                        </h1>
+
+                            <h2 className="text-[#FFFFFF] font-IBM-PLEX-MONO lg:text-[2rem] mt-[1.5rem] tracking-wide text-[1.35rem]">
                                 Building on the remarkable success of last year, which saw over 350 teams and more than 800 participants from 6 countries and with a prize pool of INR 20,000 last year, we aim to raise the stakes this time around.
                                 Our mission is to engage beginners and challenge seasoned veterans alike with innovative questions.
-                            </h3>
-                        </div>
+                            </h2>
                     </div>
                 </div>
-                <div className={`ml-[8rem] ${window.screen.width >= 1300 ? '' : 'max-w-[20rem]'}`} id='assets-ctf'>
-                    <img
-                        src={meteor}
-                        className={`scale-[0.7] translate-x-[20rem] ${window.screen.width >= 1300 ? '' : 'translate-x-[7rem] translate-y-[2rem]'}`}
-                    />
-                    <img
-                        src={ctf}
-                        className={`scale-[0.8] -mt-16 ml-4 ${window.screen.width >= 1300 ? '' : 'mt-4 translate-x-[-3rem] scale-110'}`}
-                    />
-                </div>
+                <div 
+    className={`ml-[8rem] ${window.screen.width >= 1300 ? '' : 'max-w-[20rem]'} hidden md:block`} 
+    id='assets-ctf'
+>
+    <img
+        src={meteor}
+        className={`scale-[0.7] translate-x-[20rem] ${window.screen.width >= 1300 ? '' : 'translate-x-[7rem] translate-y-[2rem]'}`}
+    />
+    <img
+        src={ctf}
+        className={`scale-[0.8] -mt-16 ml-4 ${window.screen.width >= 1300 ? '' : 'mt-4 translate-x-[-3rem] scale-110'}`}
+    />
+</div>
+
             </div>
         </div>
     )
