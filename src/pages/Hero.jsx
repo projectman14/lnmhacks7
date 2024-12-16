@@ -31,17 +31,17 @@ const Hero = ({ aboutRef, ctfRef, venueRef, faqRef , scheduleRef }) => {
     }
 
     return (
-        <div className="bg-cover bg-center bg-no-repeat h-[97vh] md:h-[100vh] w-screen bg-[#282729] relative overflow-hidden 2xl:max-w-[1536px] 2xl:max-h-[874px] select-none"
+        <div className="bg-cover bg-center bg-no-repeat h-[97vh] lg:h-[100vh] w-screen bg-[#282729] relative overflow-hidden 2xl:max-w-[1536px] 2xl:max-h-[874px] select-none"
             style={{ backgroundImage: `url(${bg_new})` }}>
             <Suspense fallback={<div>Loading...</div>}>
                 <Navbar aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} scheduleRef={scheduleRef}/>
             </Suspense>
-            <div className='flex mx-8 md:mx-16 mt-20' id='hero'>
+            <div className='flex mx-8 md:mx-16 mt-8 xl:mt-20 ' id='hero'>
                 <div className='w-3/5 flex flex-col'>
-                    <h1 className={`text-[#3798D0] font-Minecraft text-[4rem] md:text-[7rem] font-medium md:tracking-widest leading-[1] md:leading-normal`}>LNM HACKS</h1>
+                    <h1 className={`text-[#3798D0] font-Minecraft text-[4rem] lg:text-[5rem] xl:text-[7rem] font-medium md:tracking-widest leading-[1] md:leading-normal`}>LNM HACKS</h1>
                     <div className='flex md:-mt-12'>
-                        <h2 className={`text-[#4DC081] font-Minecraft text-[3rem] md:text-[7rem] font-medium tracking-widest`}>X</h2>
-                        <h2 className={`text-[#ADFFE1] font-Minecraft text-[3rem] md:text-[7rem] font-medium tracking-widest ml-8`}>CTF</h2>
+                        <h2 className={`text-[#4DC081] font-Minecraft text-[3rem] lg:text-[7rem] font-medium tracking-widest`}>X</h2>
+                        <h2 className={`text-[#ADFFE1] font-Minecraft text-[3rem] lg:text-[7rem] font-medium tracking-widest ml-8`}>CTF</h2>
                     </div>
                     <div>
                         <h3 className='text-[#EE3A23] mt-4 md:mt-0  font-Minecraft text-[3rem] md:text-[4rem] font-medium leading-[1] md:leading-normal tracking-widest animation-opacity animation-blink'>Coming Soon</h3>
@@ -51,7 +51,7 @@ const Hero = ({ aboutRef, ctfRef, venueRef, faqRef , scheduleRef }) => {
                     </Suspense>
                 </div>
                 <div className='flex flex-col w-2/5 items-center '>
-                    <div className={`mt-4 hidden md:flex`}>
+                    <div className={`mt-4 hidden xl:flex`}>
                         <img src={BracketLeft} className='h-44' alt="Bracket Left" loading="lazy" />
                         <img src={Coin} className='h-44' alt="Coin" loading="lazy" />
                         <img src={BracketRight} className='-ml-[2.1rem] h-44' alt="Bracket Right" loading="lazy" />
