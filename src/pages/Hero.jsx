@@ -31,12 +31,12 @@ const Hero = ({ aboutRef, ctfRef, venueRef, faqRef , scheduleRef }) => {
     }
 
     return (
-        <div className="bg-cover bg-center bg-no-repeat h-[97vh] lg:h-[100vh] w-screen bg-[#282729] relative overflow-hidden 2xl:max-w-[1536px] 2xl:max-h-[874px] select-none"
+        <div className="bg-cover bg-center bg-no-repeat max-md:h-[97vh] pb-16 lg:pb-0 lg:h-[100vh] w-screen bg-[#282729] relative overflow-hidden 2xl:max-w-[1536px] 2xl:max-h-[874px] select-none"
             style={{ backgroundImage: `url(${bg_new})` }}>
             <Suspense fallback={<div>Loading...</div>}>
                 <Navbar aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} scheduleRef={scheduleRef}/>
             </Suspense>
-            <div className='flex mx-8 md:mx-16 mt-8 xl:mt-20 ' id='hero'>
+            <div className='flex mx-8 lg:mx-16 mt-8 xl:mt-20 ' id='hero'>
                 <div className='w-3/5 flex flex-col'>
                     <h1 className={`text-[#3798D0] font-Minecraft text-[4rem] lg:text-[5rem] xl:text-[7rem] font-medium md:tracking-widest leading-[1] md:leading-normal`}>LNM HACKS</h1>
                     <div className='flex lg:-mt-12'>
