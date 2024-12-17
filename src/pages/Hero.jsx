@@ -39,7 +39,7 @@ const Hero = ({ aboutRef, ctfRef, venueRef, faqRef , scheduleRef }) => {
             <div className='flex mx-8 md:mx-16 mt-8 xl:mt-20 ' id='hero'>
                 <div className='w-3/5 flex flex-col'>
                     <h1 className={`text-[#3798D0] font-Minecraft text-[4rem] lg:text-[5rem] xl:text-[7rem] font-medium md:tracking-widest leading-[1] md:leading-normal`}>LNM HACKS</h1>
-                    <div className='flex md:-mt-12'>
+                    <div className='flex lg:-mt-12'>
                         <h2 className={`text-[#4DC081] font-Minecraft text-[3rem] lg:text-[7rem] font-medium tracking-widest`}>X</h2>
                         <h2 className={`text-[#ADFFE1] font-Minecraft text-[3rem] lg:text-[7rem] font-medium tracking-widest ml-8`}>CTF</h2>
                     </div>

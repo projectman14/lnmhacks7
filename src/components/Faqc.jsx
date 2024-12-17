@@ -64,7 +64,7 @@ const Faqc = () => {
         }
     }
     return (
-        <div className="bg-cover bg-center bg-no-repeat lg:py-[2rem] xl:p-[0rem] xl:h-[110vh] w-screen bg-[#282729] relative overflow-hidden max-w-[1536px] 2xl:max-h-[864px]"
+        <div className="xl:bg-cover bg-center xl:bg-no-repeat lg:py-[2rem]  xl:p-[0rem] xl:h-[120vh] w-screen bg-[#282729] relative overflow-hidden max-w-[1536px] 2xl:max-h-[864px]"
             style={{ backgroundImage: `url(${background})` }}>
             <div className='flex-col xl:flex xl:flex-row xl:justify-between mx-24 mt-8'>
                 <div className='flex flex-col'>
