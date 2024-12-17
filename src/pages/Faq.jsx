@@ -64,9 +64,9 @@ const Faq = ({ faqRef }) => {
         }
     }
     return (
-        <div ref={faqRef} className="bg-cover bg-center bg-no-repeat h-[110vh] w-screen bg-[#282729] relative overflow-hidden max-w-[1536px] 2xl:max-h-[864px]"
+        <div ref={faqRef} className="bg-cover bg-center bg-no-repeat lg:py-[2rem] xl:p-[0rem] xl:h-[110vh] w-screen bg-[#282729] relative overflow-hidden max-w-[1536px] 2xl:max-h-[864px]"
             style={{ backgroundImage: `url(${background})` }}>
-            <div className='flex justify-between mx-24 mt-8'>
+            <div className='flex-col xl:flex xl:flex-row xl:justify-between mx-24 mt-8'>
                 <div className='flex flex-col'>
                     <div className='mt-16'>
                         <TopicButton className={'text-xl font-normal tracking-wider h-12 w-48'} text={'Topic#4-FAQS'} />
@@ -104,13 +104,13 @@ const Faq = ({ faqRef }) => {
                                     className='rounded-xl bg-transparent border-[3px] mt-[0.1rem] border-black h-40 w-[28rem] font-IBM-PLEX-MONO pl-2 pt-2'
                                 />
                             </div>
-                            <div className='mt-2 flex justify-end mr-1'>
+                            <div className='mt-2 flex xl:justify-end mr-1'>
                                 <button className='rounded-md bg-[#4DC081] h-8 w-[7.5rem] font-Minecraft text-lg pb-1' onClick={submitQuery}>{btnStatus}</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col mt-36  ml-28'>
+                <div className='flex flex-col mt-36  xl:ml-28'>
                     <div>
                         <h3 className='text-white font-Minecraft text-3xl max-w-72'>FREQUENTLY ASKED QUESTIONS</h3>
                     </div>
