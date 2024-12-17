@@ -47,11 +47,11 @@ const Schedule = ({ scheduleRef }) => {
                     style={{ backgroundImage: `url(${schedule})` }}
                 >
                     <div className='flex flex-col'>
-                        <div className='flex mt-[14.4rem] z-10 ml-28 max-xl:invisible'>
-                            <h3 className='font-Pixeboy text-[1.7rem]  '>HACKS</h3>
-                            <h3 className='font-Pixeboy text-[1.7rem] ml-7 font-extralight '>GOT</h3>
-                            <h3 className='font-Pixeboy text-[1.7rem] ml-7 font-extralight '>IT</h3>
-                            <h3 className='font-Pixeboy text-[1.7rem] ml-7 font-extralight '>COVERED</h3>
+                        <div className='flex mt-[14.4rem] z-10 ml-28'>
+                            <h3 className='font-Pixeboy text-[1.7rem] max-sm:text-[1.35rem] max-sm:py-[0.25rem]  '>HACKS</h3>
+                            <h3 className='font-Pixeboy text-[1.7rem] max-sm:text-[1.35rem] max-sm:py-[0.25rem] ml-7 font-extralight '>GOT</h3>
+                            <h3 className='font-Pixeboy text-[1.7rem] max-sm:text-[1.35rem] max-sm:py-[0.25rem] ml-7 font-extralight '>IT</h3>
+                            <h3 className='font-Pixeboy text-[1.7rem] max-sm:text-[1.35rem] max-sm:py-[0.25rem] ml-7 font-extralight '>COVERED</h3>
                         </div>
                         <div className='flex'>
                             <div className='max-xl:hidden'>
@@ -65,14 +65,14 @@ const Schedule = ({ scheduleRef }) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col my-10 ml-16 h-[26rem] overflow-y-scroll max-xl:ml-[6rem] md:mx-[11rem]">
+                            <div className="flex flex-col my-10 ml-16 h-[26rem] overflow-y-scroll max-xl:ml-[6rem] md:max-xl:mx-[11rem]">
                                 {events.map((event, index) => (
                                     <div key={index} className="flex max-sm:justify-start justify-between -mt-[1.5rem] w-[34rem] select-none">
-                                        <h3 className={`font-Pixeboy max-xl:text-[2rem] max-sm:w-[13rem] max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium text-transform:uppercase ${events[1].name == Day2[1].name ? 'text-[3rem] max-sm:text-[1rem]' : ''}`}>{event.name}</h3>
-                                        <h3 className="font-Pixeboy max-xl:text-[2rem] max-sm:ml-[3rem] max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium">{event.time}</h3>
+                                        <h3 className={`font-Pixeboy max-xl:text-[2rem] max-sm:w-[13rem] max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium text-transform:uppercase ${events[1].name == Day2[1].name ? 'text-[3rem] max-sm:text-[1.25rem]' : ''}`}>{event.name}</h3>
+                                        <h3 className={`font-Pixeboy max-xl:text-[2rem]  ${window.screen.width < 400 ? 'max-sm:-ml-[0.2rem]' : 'max-sm:ml-[3rem]'} max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium`}>{event.time}</h3>
                                     </div>
                                 ))}
-                                <div className={`flex xl:hidden ${selectedDay == 2 ? 'mt-[1.95rem] max-sm:-mt-[0.5rem]' : 'mt-16'} md:mx-auto`}>
+                                <div className={`flex xl:hidden ${selectedDay == 2 ? 'mt-[1.95rem] max-sm:mt-[1.3rem]' : 'mt-16'} md:mx-auto`}>
                                     <button className={`rounded-full flex justify-center items-center bg-[#4DC081] font-Pixeboy pt-[0.25rem] text-4xl text-white h-[3rem] w-[3rem] mt-[2rem] xl:hidden ${selectedDay == 1 ? 'invisible' : 'visible'}`} onClick={() => { setEventsInResponsive("Prev") }}>←</button>
                                     <h3 className='text-white font-Pixeboy text-[2.7rem] mt-[1.6rem] ml-[3.5rem]'>Day {selectedDay}</h3>
                                     <button className={`rounded-full flex justify-center items-center bg-[#4DC081] font-Pixeboy pt-[0.25rem] text-4xl text-white h-[3rem] w-[3rem] mt-[2rem] xl:hidden ml-[2.5rem] cursor-pointer z-10 ${selectedDay == 3 ? 'invisible' : 'visible'}`} onClick={() => { setEventsInResponsive("Next") }}>→</button>
