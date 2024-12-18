@@ -81,7 +81,7 @@ const Query = () => {
               text={"Topic#4-FAQS"}
             />
           </div>
-          <div className="flex -ml-14">
+          <div className="flex -ml-16 w-[100vw]">
             <h1 className="text-[#4DC081] font-Handjet text-[1.8rem] font-extrabold mt-[1.5rem] tracking-widest">
               Ask Your Queries
             </h1>
@@ -139,7 +139,7 @@ const Query = () => {
         </div>
       </div>
 
-      <div className="flex flex-col mt-36  xl:ml-28 ml-5 items-center px-3">
+      <div className="flex flex-col mt-36  xl:ml-28 ml-7">
         <div>
           <h3 className="text-white font-Minecraft text-xl max-w-72">
             FREQUENTLY ASKED QUESTIONS
