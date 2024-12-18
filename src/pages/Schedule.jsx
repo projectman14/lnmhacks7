@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import background from '../../public/bg.png'
 import TopicButton from '../components/TopicButton'
 import schedule from '../../public/schedule.png'
+import scheduleImg from '../../public/scheduleImg.svg'
 import days from '../../public/Days.png'
 
 const Schedule = ({ scheduleRef }) => {
@@ -37,8 +38,9 @@ const Schedule = ({ scheduleRef }) => {
             ref={scheduleRef}
         >
             <div className='mx-[2rem] lg:mx-24 flex flex-col'>
-                <div className='mt-16 ml-5 lg:ml-3'>
-                    <TopicButton className={'text-lg md:text-xl font-normal tracking-wider h-12 w-64'} text={'Topic#3-Schedule'} />
+                <div className='mt-16 ml-5 flex lg:ml-3'>
+                    <TopicButton className={'text-lg md:text-xl font-normal max-sm:text-[1rem] tracking-wider h-12 w-64'} text={'Topic#3-Schedule'} />
+                    <img src={scheduleImg} className='ml-9 md:ml-[4rem] h-12 md:h-16 -mt-[0.2rem]' alt="About Image 1" width="64" height="64" />
                 </div>
                 <div className='mt-4 lg:-ml-5'>
                     <h1 className='text-[#4DC081] font-Handjet lg:text-[3rem] font-extrabold mt-[1.5rem] tracking-widest text-[2.5rem] lg:pb-[0.25rem]'>Schedule</h1>
@@ -69,7 +71,7 @@ const Schedule = ({ scheduleRef }) => {
                                 {events.map((event, index) => (
                                     <div key={index} className="flex max-sm:justify-start justify-between -mt-[1.5rem] w-[34rem] select-none">
                                         <h3 className={`font-Pixeboy max-xl:text-[2rem] max-sm:w-[13rem] max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium text-transform:uppercase ${events[1].name == Day2[1].name ? 'text-[3rem] max-sm:text-[1.25rem]' : ''}`}>{event.name}</h3>
-                                        <h3 className={`font-Pixeboy max-xl:text-[2rem]  ${window.screen.width < 400 ? 'max-sm:-ml-[0.2rem]' : 'max-sm:ml-[3rem]'} max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium`}>{event.time}</h3>
+                                        <h3 className={`font-Pixeboy max-xl:text-[2rem]  ${window.screen.width < 400 ? 'max-sm:ml-[0.15rem]' : 'max-sm:ml-[3rem]'} max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium`}>{event.time}</h3>
                                     </div>
                                 ))}
                                 <div className={`flex xl:hidden ${selectedDay == 2 ? 'mt-[1.95rem] max-sm:mt-[1.3rem]' : 'mt-16'} md:mx-auto`}>
