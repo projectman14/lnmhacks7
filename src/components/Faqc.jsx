@@ -68,12 +68,12 @@ const Faqc = () => {
             style={{ backgroundImage: `url(${background})` }}>
             <div className='flex-col xl:flex xl:flex-row xl:justify-between mx-24 mt-8'>
                 <div className='flex flex-col'>
-                    <div className='mt-16'>
+                    <div className='mt-16 flex'>
                         <TopicButton className={'text-xl font-normal tracking-wider h-12 w-48'} text={'Topic#4-FAQS'} />
+                        <img src={experiment} alt="Experiment icon" className='ml-9 md:ml-[4rem] h-12 md:h-16 -mt-[0.2rem]' width="64" height="64"/>
                     </div>
                     <div className='flex -ml-5'>
                         <h1 className='text-[#4DC081] font-Handjet text-[3rem] font-extrabold mt-[1.5rem] tracking-widest'>Ask Your Queries</h1>
-                        <img src={experiment} alt="Experiment icon" className='h-16 mt-5 ml-3' />
                     </div>
                     <div className='-ml-28 -mt-16'>
                         <img src={faqBg} alt="FAQ background" className='absolute scale-75' />

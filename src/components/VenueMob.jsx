@@ -8,7 +8,7 @@ const VenueMob = () => {
     return (
         <>
             <div
-                className="bg-cover bg-center bg-no-repeat w-screen bg-[#282729] overflow-hidden 2xl:max-w-[1536px] 2xl:max-h-[68rem] -mb-[20rem] md:-mb-[40rem]"
+                className={`bg-cover bg-center bg-no-repeat w-screen bg-[#282729] overflow-hidden 2xl:max-w-[1536px] 2xl:max-h-[68rem]  ${window.screen.width < 450 ? 'max-sm:-mb-[30rem]' : 'max-sm:-mb-[25rem]'} -mb-[20rem] md:-mb-[40rem]`}
                 style={{ backgroundImage: `url(${background})` }}
             >
                 <div className='flex flex-col pl-10 mt-16'>
