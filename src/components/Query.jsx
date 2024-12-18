@@ -77,13 +77,13 @@ const Query = () => {
         <div className="flex flex-col">
           <div className="mt-16 -ml-12 flex">
             <TopicButton
-              className={"text-lg font-normal tracking-wider h-12 w-48"}
+              className={"text-lg max-sm:text-[0.8rem] md:text-xl font-normal tracking-wider h-12 w-48 max-sm:w-40"}
               text={"Topic#4-FAQS"}
             />
             <img
               src={experiment}
               alt="Experiment icon"
-              className="ml-[2.8rem] md:ml-[4rem] h-16 -mt-[0.2rem]"
+              className="max-sm:ml-[2.2rem] ml-[2.8rem] md:ml-[4rem] h-16 -mt-[0.2rem]"
             />
           </div>
           <div className="flex -ml-16 w-[100vw]">
