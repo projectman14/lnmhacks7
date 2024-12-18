@@ -56,7 +56,7 @@ const Footer = ({ aboutRef, ctfRef, venueRef, faqRef, scheduleRef }) => {
           </div>
         </div>
       </div>
-      <div className='bg-[#282729] lg:h-[5.5rem] flex flex-col items-center pt-1 lg:text-2xl tracking-wider px-4'>
+      <div className='bg-[#282729] lg:h-[5.5rem] flex-col items-center pt-1 lg:text-2xl tracking-wider px-4 text-sm hidden sm:flex'>
         <h3 className='font-Pixeboy text-white'>Designed by the love of : Dhruv Doshi, Adwitiya Vivek, Akshat Singh, Adtiya Karanwal</h3>
         <h3 className='font-Pixeboy text-white mt-1'>Developed by the love of : Lakshya Jain, Naman Khandelwal, Pranshu Saxena, Manan Singhal , Harshit Nayan</h3>
       </div>
