@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import background from '../../public/bg.png'
 import TopicButton from '../components/TopicButton'
 import schedule from '../../public/schedule.png'
@@ -13,13 +13,17 @@ const Schedule = ({ scheduleRef }) => {
     const Day3 = [{ name: "Breakfast", time: "8:00" }, { name: " Speaker Talk", time: "10:00" }, { name: "Submission Process", time: "11:00" }, { name: "Submission Deadline", time: "2:00" }, { name: "Swag Distribution", time: "16:00" }, { name: "Closing Ceremony", time: "17:00" }]
     const [selectedDay, setSelectedDay] = useState(1);
 
+    const dayOneRef = useRef(null);
+    const dayTwoRef = useRef(null);
+    const dayThreeRef = useRef(null);
+
     const setEventsInResponsive = (clicked) => {
         console.log("Hello");
         let Day = 0;
         if (clicked == "Next") {
             Day = selectedDay + 1;
             setSelectedDay(Day);
-        }else{
+        } else {
             Day = selectedDay - 1;
             setSelectedDay(Day);
         }
@@ -32,8 +36,13 @@ const Schedule = ({ scheduleRef }) => {
             setEvents(Day3);
         }
     }
+
+    const mouseEnterEvent = (key) => {
+        setSelectedDay(key);
+    }
+
     return (
-        <div className="bg-cover bg-center bg-no-repeat md:h-[140vh] xl:h-[120vh] w-screen bg-[#282729] overflow-hidden max-w-[1536px] 2xl:max-h-[890px] select-none"
+        <div className="bg-cover bg-center bg-no-repeat md:h-[140vh] xl:h-[140vh] w-screen bg-[#282729] overflow-hidden max-w-[1536px] 2xl:max-h-[890px] select-none"
             style={{ backgroundImage: `url(${background})` }}
             ref={scheduleRef}
         >
@@ -59,21 +68,39 @@ const Schedule = ({ scheduleRef }) => {
                             <div className='max-xl:hidden'>
                                 <div className='z-10 h-[19.5rem] w-[17.4rem] mt-20 ml-32 flex flex-col' style={{ backgroundImage: `url(${days})`, backgroundRepeat: 'no-repeat' }}>
                                     <div className='mx-auto mt-4 text-center select-none'>
-                                        <h3 className={`font-Pixeboy text-7xl font-medium cursor-pointer hover:scale-105 ${selectedDay == 1 ? 'text-[#4DC081]' : 'text-white'}`} onClick={() => { setEvents(Day1); setSelectedDay(1) }}>DAY-1</h3>
+                                        <h3 className={`font-Pixeboy text-7xl font-medium cursor-pointer hover:scale-105 ${selectedDay == 1 ? 'text-[#4DC081]' : 'text-white'}`} onClick={() => { /*setEvents(Day1);*/ setSelectedDay(1); dayOneRef.current?.scrollIntoView({ behavior: 'smooth' }); }}>DAY-1</h3>
                                         <hr className='mt-4' />
-                                        <h3 className={`font-Pixeboy text-7xl font-medium mt-4 cursor-pointer hover:scale-105 ${selectedDay == 2 ? 'text-[#4DC081]' : 'text-white'}`} onClick={() => { setSelectedDay(2); setEvents(Day2) }}>DAY-2</h3>
+                                        <h3 className={`font-Pixeboy text-7xl font-medium mt-4 cursor-pointer hover:scale-105 ${selectedDay == 2 ? 'text-[#4DC081]' : 'text-white'}`} onClick={() => { /*setEvents(Day2);*/ setSelectedDay(2); dayTwoRef.current?.scrollIntoView({ behavior: 'smooth' }); }}>DAY-2</h3>
                                         <hr className='mt-4' />
-                                        <h3 className={`font-Pixeboy text-7xl font-medium mt-4 cursor-pointer hover:scale-105 ${selectedDay == 3 ? 'text-[#4DC081]' : 'text-white'}`} onClick={() => { setSelectedDay(3); setEvents(Day3) }}>DAY-3</h3>
+                                        <h3 className={`font-Pixeboy text-7xl font-medium mt-4 cursor-pointer hover:scale-105 ${selectedDay == 3 ? 'text-[#4DC081]' : 'text-white'}`} onClick={() => { /*setEvents(Day3);*/ setSelectedDay(3); dayThreeRef.current?.scrollIntoView({ behavior: 'smooth' }); }}>DAY-3</h3>
                                     </div>
                                 </div>
                             </div>
                             <div className="flex flex-col my-10 ml-16 h-[26rem] overflow-y-scroll max-xl:ml-[6rem] md:max-xl:mx-[11rem]">
-                                {events.map((event, index) => (
-                                    <div key={index} className="flex max-sm:justify-start justify-between -mt-[1.5rem] w-[34rem] select-none">
-                                        <h3 className={`font-Pixeboy max-xl:text-[2rem] max-sm:w-[13rem] max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium text-transform:uppercase ${events[1].name == Day2[1].name ? 'text-[3rem] max-sm:text-[1.25rem]' : ''}`}>{event.name}</h3>
-                                        <h3 className={`font-Pixeboy max-xl:text-[2rem]  ${window.screen.width < 400 ? 'max-sm:ml-[0.15rem]' : 'max-sm:ml-[3rem]'} max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium`}>{event.time}</h3>
-                                    </div>
-                                ))}
+                                <div ref={dayOneRef} className=''>
+                                    {events.map((event, index) => (
+                                        <div key={index} className="flex max-sm:justify-start justify-between -mt-[1.5rem] w-[34rem] select-none" onMouseEnter={() => mouseEnterEvent(1)}>
+                                            <h3 className={`font-Pixeboy max-xl:text-[2rem] max-sm:w-[13rem] max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium text-transform:uppercase ${events[1].name == Day2[1].name ? 'text-[3rem] max-sm:text-[1.25rem]' : ''}`}>{event.name}</h3>
+                                            <h3 className={`font-Pixeboy max-xl:text-[2rem]  ${window.screen.width < 400 ? 'max-sm:ml-[0.15rem]' : 'max-sm:ml-[3rem]'} max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium`}>{event.time}</h3>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div ref={dayTwoRef} className='mt-[10rem] mb-[5rem] max-xl:hidden' onMouseEnter={() => mouseEnterEvent(2)}>
+                                    {Day2.map((event, index) => (
+                                        <div key={index} className="flex max-sm:justify-start justify-between -mt-[1.5rem] w-[34rem] select-none">
+                                            <h3 className={`font-Pixeboy max-xl:text-[2rem] max-sm:w-[13rem] max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium text-transform:uppercase ${Day2[1].name == Day2[1].name ? 'text-[3rem] max-sm:text-[1.25rem]' : ''}`}>{event.name}</h3>
+                                            <h3 className={`font-Pixeboy max-xl:text-[2rem]  ${window.screen.width < 400 ? 'max-sm:ml-[0.15rem]' : 'max-sm:ml-[3rem]'} max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium`}>{event.time}</h3>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div ref={dayThreeRef} className='mt-[10rem] mb-[5rem] max-xl:hidden' onMouseEnter={() => mouseEnterEvent(3)}>
+                                    {Day3.map((event, index) => (
+                                        <div key={index} className="flex max-sm:justify-start justify-between -mt-[1.5rem] w-[34rem] select-none">
+                                            <h3 className={`font-Pixeboy max-xl:text-[2rem] max-sm:w-[13rem] max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium text-transform:uppercase ${Day3[1].name == Day2[1].name ? 'text-[3rem] max-sm:text-[1.25rem]' : ''}`}>{event.name}</h3>
+                                            <h3 className={`font-Pixeboy max-xl:text-[2rem]  ${window.screen.width < 400 ? 'max-sm:ml-[0.15rem]' : 'max-sm:ml-[3rem]'} max-sm:text-[1.5rem] max-xl:mt-6 max-xl:font-extralight max-sm:leading-[1.5] max-xl:leading-[1.3] text-[3.25rem] text-white font-medium`}>{event.time}</h3>
+                                        </div>
+                                    ))}
+                                </div>
                                 <div className={`flex xl:hidden ${selectedDay == 2 ? 'mt-[1.95rem] max-sm:mt-[1.3rem]' : 'mt-16'} md:mx-auto`}>
                                     <button className={`rounded-full flex justify-center items-center bg-[#4DC081] font-Pixeboy pt-[0.25rem] text-4xl text-white h-[3rem] w-[3rem] mt-[2rem] xl:hidden ${selectedDay == 1 ? 'invisible' : 'visible'}`} onClick={() => { setEventsInResponsive("Prev") }}>←</button>
                                     <h3 className='text-white font-Pixeboy text-[2.7rem] mt-[1.6rem] ml-[3.5rem]'>Day {selectedDay}</h3>

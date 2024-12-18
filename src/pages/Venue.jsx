@@ -10,11 +10,11 @@ const Venue = ({ venueRef }) => {
                 ref={venueRef}
             >
 
-            <div className="hidden lg:block">
+            <div className="hidden xl:block">
                 <VenuePc />
             </div>
 
-            <div className="block lg:hidden">
+            <div className="block xl:hidden">
                 <VenueMob />
             </div>
                 
