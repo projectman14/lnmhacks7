@@ -57,7 +57,7 @@ const Hero = ({ aboutRef, ctfRef, venueRef, faqRef , scheduleRef }) => {
                         <img src={BracketRight} className='-ml-[2.1rem] h-44' alt="Bracket Right" loading="lazy" />
                     </div>
                     <div>
-                        <img src={Dinosaur} className='h-56 sm:max-md:mt-[3rem] -mt-4 md:mt-32 max-sm:ml-4 ml-2 md:ml-20' alt="Dinosaur" loading="lazy"/>
+                        <img src={Dinosaur} className='h-[6rem] mt-5 sm:h-56 sm:max-md:mt-[3rem] sm:-mt-4 md:mt-32 max-sm:ml-4 ml-2 md:ml-20' alt="Dinosaur" loading="lazy"/>
                     </div>
                 </div>
             </div>
