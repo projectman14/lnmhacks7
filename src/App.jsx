@@ -35,9 +35,9 @@ function App() {
     <div className="bg-black min-h-screen flex justify-center">
       <div className="w-full max-w-[1536px] overflow-x-hidden Scrollbar">
         <Helmet>
-          <title>LNMHacks 7.0</title>
+          <title>LNMHacks</title>
           <meta name="description" content="LNMHacks , the ultimate 72-hour hackathon at Tech-Fest Plinth! Collaborate, innovate, and transform ideas into reality as coding enthusiasts from all levels come together. Unleash your potential and shape the future of technology at LNM Institute of Information Technology. Don’t miss out—register now!" />
-          <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+          <link rel="icon" type="image/x-icon" href="/hacksIcon.ico"/>
 
         </Helmet>
         <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} scheduleRef={scheduleRef} />
