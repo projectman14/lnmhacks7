@@ -37,7 +37,7 @@ function App() {
         <Helmet>
           <title>LNMHacks</title>
           <meta name="description" content="LNMHacks , the ultimate 72-hour hackathon at Tech-Fest Plinth! Collaborate, innovate, and transform ideas into reality as coding enthusiasts from all levels come together. Unleash your potential and shape the future of technology at LNM Institute of Information Technology. Don’t miss out—register now!" />
-          <link rel="icon" type="image/x-icon" href="/hacksIcon.ico"/>
+          <link rel="icon" type="image/x-icon" href="./assets/hacksIcon.ico"/>
 
         </Helmet>
         <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} scheduleRef={scheduleRef} />

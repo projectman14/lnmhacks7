@@ -47,7 +47,7 @@ const Hero = ({ aboutRef, ctfRef, venueRef, faqRef , scheduleRef }) => {
                         <h3 className='text-[#EE3A23] mt-4 md:mt-0  font-Minecraft text-[3rem] md:text-[4rem] font-medium leading-[1] md:leading-normal tracking-widest animation-opacity animation-blink'>Coming Soon</h3>
                     </div>
                     <Suspense fallback={<div>Loading...</div>}>
-                        <TopicButton onClick={openRegistrationForm} text={'Pre-Register Now'} className={'text-lg font-normal tracking-wider ml-8 mt-8 md:mt-4 w-56 cursor-pointer z-10'} />
+                        <TopicButton onClick={openRegistrationForm} text={'Register Now'} className={'text-lg font-normal tracking-wider ml-8 mt-8 md:mt-4 w-44 cursor-pointer z-10'} />
                     </Suspense>
                 </div>
                 <div className='flex flex-col w-2/5 items-center '>
