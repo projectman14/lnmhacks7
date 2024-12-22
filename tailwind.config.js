@@ -15,6 +15,7 @@ export default {
         'Pixeboy': ['Pixeboy', 'sans-serif'],
         'Public-sans' : ["Public Sans", 'sans-serif'] ,
         'Futura-Black' : ['FuturaBlack', 'sans-serif'],
+        'FsGravity' : ['FsGravity', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {

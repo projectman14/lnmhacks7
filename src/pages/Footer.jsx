@@ -33,7 +33,7 @@ const Footer = ({ aboutRef, ctfRef, venueRef, faqRef, scheduleRef }) => {
         </div>
         {/* //////////////jkjkjkjkjk */}
         <div className='flex flex-col mt-4 ml-6'>
-          <div className='flex font-Futura-Black underline text-white lg:text-2xl lg:flex-row-reverse lg:justify-start justify-center'>
+          <div className='flex font-FsGravity lg:font-Futura-Black underline text-white text-2xl lg:flex-row-reverse lg:justify-start justify-center'>
             <h3 className='mr-4 tracking-wide cursor-pointer select-none'  onClick={()=>window.open("https://ctf.lnmhacks7.tech", "_blank")}>CTF</h3>
             <h3 className='mr-4 tracking-wide cursor-pointer select-none' onClick={() => {
               scheduleRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -42,14 +42,17 @@ const Footer = ({ aboutRef, ctfRef, venueRef, faqRef, scheduleRef }) => {
               aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
             }}>About</h3>
           </div>
-          <div className='flex font-Futura-Black underline text-white lg:text-2xl lg:flex-row-reverse mt-2 lg:justify-start justify-center'>
+          <div className='flex font-FsGravity lg:font-Futura-Black underline text-white text-2xl lg:flex-row-reverse mt-2 lg:justify-start justify-center'>
+          <h3 className='lg:hidden mr-4 tracking-wide cursor-pointer select-none' onClick={() => {
+              faqRef.current?.scrollIntoView({ behavior: 'smooth' });
+            }}>FAQs</h3>
             <h3 className='mr-4 tracking-wide cursor-pointer select-none'>Tracks & Prizes</h3>
           </div>
-          <div className='flex font-Futura-Black underline text-white lg:text-2xl lg:flex-row-reverse mt-2 lg:justify-start justify-center'>
+          <div className='flex  font-FsGravity lg:font-Futura-Black underline text-white text-2xl lg:flex-row-reverse mt-2 lg:justify-start justify-center'>
             <h3 className='mr-4 tracking-wide cursor-pointer select-none' onClick={() => {
               venueRef.current?.scrollIntoView({ behavior: 'smooth' });
             }}>Venue</h3>
-            <h3 className='mr-4 tracking-wide cursor-pointer select-none' onClick={() => {
+            <h3 className='hidden lg:block mr-4 tracking-wide cursor-pointer select-none' onClick={() => {
               faqRef.current?.scrollIntoView({ behavior: 'smooth' });
             }}>FAQs</h3>
             <h3 className='mr-4 tracking-wide cursor-pointer select-none'>Our Sponsors</h3>

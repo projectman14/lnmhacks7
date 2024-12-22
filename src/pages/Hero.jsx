@@ -47,7 +47,7 @@ const Hero = ({ aboutRef, ctfRef, venueRef, faqRef , scheduleRef }) => {
                         <h3 className='text-[#EE3A23] mt-4 md:mt-0  font-Minecraft text-[3rem] md:text-[4rem] font-medium leading-[1] md:leading-normal tracking-widest animation-opacity animation-blink'>Coming Soon</h3>
                     </div>
                     <Suspense fallback={<div>Loading...</div>}>
-                        <TopicButton onClick={openRegistrationForm} text={'Pre-Register Now'} className={'text-lg font-normal tracking-wider ml-8 mt-8 md:mt-4 w-56 cursor-pointer z-10'} />
+                        <TopicButton onClick={openRegistrationForm} text={'Register Now'} className={'text-lg font-normal tracking-wider ml-8 mt-8 md:mt-4 w-44 cursor-pointer z-10'} />
                     </Suspense>
                 </div>
                 <div className='flex flex-col w-2/5 items-center '>
@@ -57,7 +57,7 @@ const Hero = ({ aboutRef, ctfRef, venueRef, faqRef , scheduleRef }) => {
                         <img src={BracketRight} className='-ml-[2.1rem] h-44' alt="Bracket Right" loading="lazy" />
                     </div>
                     <div>
-                        <img src={Dinosaur} className='h-56 sm:max-md:mt-[3rem] -mt-4 md:mt-32 max-sm:ml-4 ml-2 md:ml-20' alt="Dinosaur" loading="lazy"/>
+                        <img src={Dinosaur} className='h-[6rem] mt-5 sm:h-56 sm:max-md:mt-[3rem] sm:-mt-4 md:mt-32 max-sm:ml-4 ml-2 md:ml-20' alt="Dinosaur" loading="lazy"/>
                     </div>
                 </div>
             </div>
