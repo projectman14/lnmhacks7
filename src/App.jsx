@@ -37,8 +37,11 @@ function App() {
         <Helmet>
           <title>LNMHacks</title>
           <meta name="description" content="LNMHacks , the ultimate 72-hour hackathon at Tech-Fest Plinth! Collaborate, innovate, and transform ideas into reality as coding enthusiasts from all levels come together. Unleash your potential and shape the future of technology at LNM Institute of Information Technology. Don’t miss out—register now!" />
-          <link rel="icon" type="image/x-icon" href="./assets/hacksIcon.ico"/>
-
+          <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+          <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="manifest" href="/site.webmanifest" />
         </Helmet>
         <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} scheduleRef={scheduleRef} />
         <About aboutRef={aboutRef} />
