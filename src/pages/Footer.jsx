@@ -27,7 +27,7 @@ const Footer = ({ aboutRef, ctfRef, venueRef, faqRef, scheduleRef }) => {
           <div className='mt-3 flex -ml-[0.25rem] flex-row'>
             <img src={xLogo} className='mr-4 size-[2.5rem] select-none cursor-pointer' onClick={()=>{handleImageClick('https://x.com/LNMHacks')}}/>
             <img src={linkedinLogo} className='mr-4 size-[2.5rem] select-none cursor-pointer' onClick={() => {handleImageClick('https://www.linkedin.com/company/lnmhacks7')}} />
-            <img src={gmailLogo} className='mr-4 size-[2.5rem] select-none cursor-pointer' onClick={()=>{handleEmailClick('team@lnmhacks.xyz')}}/>
+            <img src={gmailLogo} className='mr-4 size-[2.5rem] select-none cursor-pointer' onClick={()=>{handleEmailClick('team@lnmhacks7.tech')}}/>
             <img src={fackbookLogo} className='mr-4 size-[2.5rem] select-none cursor-pointer' onClick={()=>{handleImageClick('https://www.facebook.com/lnmhacks')}}/>
           </div>
         </div>
