@@ -27,7 +27,7 @@ const About = ({ aboutRef }) => {
     }, [])
 
     return (
-        <div className="bg-cover bg-center bg-no-repeat xl:h-[100vh] w-[100vw] bg-[#282729] overflow-hidden max-w-[1536px] 2xl:max-h-[864px] select-none"
+        <div className="bg-center bg-repeat xl:h-[100vh] w-[100vw] bg-[#282729] overflow-hidden max-w-[1536px] 2xl:max-h-[864px] select-none"
             style={{ backgroundImage: `url(${background})` }}
             ref={aboutRef}>
             <div className='flex flex-col lg:flex-row lg:mx-[6rem] mt-8 mx-[2rem] select-none lg:pb-[2rem]'>
