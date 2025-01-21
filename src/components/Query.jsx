@@ -70,7 +70,7 @@ const Query = () => {
   };
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat lg:py-[2rem] xl:p-[0rem] xl:h-[110vh] w-screen bg-[#282729] relative overflow-hidden max-w-[1536px] 2xl:max-h-[864px]"
+      className="bg-center bg-repeat lg:py-[2rem] xl:p-[0rem] xl:h-[110vh] w-screen bg-[#282729] relative overflow-hidden max-w-[1536px] 2xl:max-h-[864px]"
       style={{ backgroundImage: `url(${background})` }}
     >
       <div className="flex-col xl:flex xl:flex-row xl:justify-between mx-24 mt-8">
@@ -78,7 +78,7 @@ const Query = () => {
           <div className="mt-16 -ml-12 flex">
             <TopicButton
               className={"text-lg max-sm:text-[0.8rem] md:text-xl font-normal tracking-wider h-12 w-48 max-sm:w-40"}
-              text={"Topic#4-FAQS"}
+              text={"Topic#5-FAQS"}
             />
             <img
               src={experiment}

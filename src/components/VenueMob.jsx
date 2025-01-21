@@ -8,12 +8,12 @@ const VenueMob = () => {
     return (
         <>
             <div
-                className={`bg-cover bg-center bg-no-repeat w-screen bg-[#282729] overflow-hidden 2xl:max-w-[1536px] 2xl:max-h-[68rem]  ${window.screen.width < 450 ? 'max-sm:-mb-[30rem]' : 'max-sm:-mb-[25rem]'} -mb-[20rem] md:-mb-[40rem]`}
+                className={`bg-center bg-repeat w-screen bg-[#282729] overflow-hidden 2xl:max-w-[1536px] 2xl:max-h-[68rem]  ${window.screen.width < 450 ? 'max-sm:-mb-[30rem]' : 'max-sm:-mb-[25rem]'} -mb-[20rem] md:-mb-[40rem]`}
                 style={{ backgroundImage: `url(${background})` }}
             >
                 <div className='flex flex-col pl-10 mt-16'>
                     <div className='flex'>
-                        <TopicButton className={'text-lg font-normal tracking-wider h-12'} text={'Topic#5-Venue'} />
+                        <TopicButton className={'text-lg font-normal tracking-wider h-12'} text={'Topic#6-Venue'} />
                         <img src={Venueimg} className='scale-75 ml-12 -mt-1' />
                     </div>
                     <div className='flex flex-col -ml-4 relative h-[86rem] overflow-hidden' >

@@ -10,7 +10,7 @@ const Schedule = ({ scheduleRef }) => {
     const [events, setEvents] = useState([{ name: "Registration Start", time: "9:00" }, { name: "OPENING CEREMONY", time: "9:45" }, { name: "Idea Sketching", time: "12:00" }, { name: "LUNCH", time: "13:30" }, { name: "Progress Tracking", time: "17:30" }, { name: "DINNER", time: "21:00" }])
     const Day1 = [{ name: "Registration Start", time: "9:00" }, { name: "OPENING CEREMONY", time: "9:45" }, { name: "Idea Sketching", time: "12:00" }, { name: "LUNCH", time: "13:30" }, { name: "Progress Tracking", time: "17:30" }, { name: "DINNER", time: "21:00" }]
     const Day2 = [{ name: "Breakfast", time: "8:00" }, { name: "Blockchain Workshop", time: "11:30" }, { name: "Lunch", time: "2:00" }, { name: "1O1 Networking", time: "18:00" }, { name: "Team Bonding Session", time: "19:00" }, { name: "Dinner", time: "20:30" }, { name: "Meme Quiz", time: "21:40" }]
-    const Day3 = [{ name: "Breakfast", time: "8:00" }, { name: " Speaker Talk", time: "10:00" }, { name: "Submission Process", time: "11:00" }, { name: "Submission Deadline", time: "2:00" }, { name: "Swag Distribution", time: "16:00" }, { name: "Closing Ceremony", time: "17:00" }]
+    const Day3 = [{ name: " Speaker Talk", time: "10:00" }, { name: "Submission Process", time: "11:00" }, {name : "Brunch" , time : "12:00"}, { name: "Submission Deadline", time: "2:00" }, { name: "Swag Distribution", time: "16:00" }, { name: "Closing Ceremony", time: "17:00" }]
     const [selectedDay, setSelectedDay] = useState(1);
 
     const dayOneRef = useRef(null);
@@ -42,13 +42,13 @@ const Schedule = ({ scheduleRef }) => {
     }
 
     return (
-        <div className="bg-cover bg-center bg-no-repeat md:h-[140vh] xl:h-[140vh] w-screen bg-[#282729] overflow-hidden max-w-[1536px] 2xl:max-h-[890px] select-none"
+        <div className="bg-center bg-repeat md:h-[140vh] xl:h-[140vh] w-screen bg-[#282729] overflow-hidden max-w-[1536px] 2xl:max-h-[890px] select-none"
             style={{ backgroundImage: `url(${background})` }}
             ref={scheduleRef}
         >
             <div className='mx-[2rem] lg:mx-24 flex flex-col'>
                 <div className='mt-16 ml-5 flex lg:ml-3'>
-                    <TopicButton className={'text-lg md:text-xl font-normal max-sm:text-[1rem] tracking-wider h-12 w-64'} text={'Topic#3-Schedule'} />
+                    <TopicButton className={'text-lg md:text-xl font-normal max-sm:text-[1rem] tracking-wider h-12 w-64'} text={'Topic#4-Schedule'} />
                     <img src={scheduleImg} className='ml-9 md:ml-[4rem] h-12 md:h-16 -mt-[0.2rem]' alt="About Image 1" width="64" height="64" />
                 </div>
                 <div className='mt-4 lg:-ml-5'>

@@ -10,6 +10,7 @@ import { Helmet } from 'react-helmet';
 import Faq from './pages/Faq'
 import Schedule from './pages/Schedule'
 import Footer from './pages/Footer'
+import Sponser from './pages/Sponser'
 gsap.registerPlugin(useGSAP);
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} scheduleRef={scheduleRef} />
         <About aboutRef={aboutRef} />
         <Ctf ctfRef={ctfRef} />
+        <Sponser/>
         <Schedule scheduleRef={scheduleRef} />
         <Faq faqRef={faqRef} />
         <Venue venueRef={venueRef} />

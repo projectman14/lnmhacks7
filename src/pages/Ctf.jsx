@@ -25,7 +25,7 @@ const Ctf = ({ ctfRef }) => {
     }, [])
     return (
         <div
-            className="bg-cover bg-center bg-no-repeat lg:h-[112vh] w-screen bg-[#282729] overflow-hidden max-w-[1536px] 2xl:max-h-[864px] select-none"
+            className="bg-center bg-repeat lg:h-[112vh] w-screen bg-[#282729] overflow-hidden max-w-[1536px] 2xl:max-h-[864px] select-none"
             style={{ backgroundImage: `url(${background})` }}
             ref={ctfRef}
         >
