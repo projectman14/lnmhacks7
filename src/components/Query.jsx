@@ -78,7 +78,7 @@ const Query = () => {
           <div className="mt-16 -ml-12 flex">
             <TopicButton
               className={"text-lg max-sm:text-[0.8rem] md:text-xl font-normal tracking-wider h-12 w-48 max-sm:w-40"}
-              text={"Topic#5-FAQS"}
+              text={"Topic#6-FAQS"}
             />
             <img
               src={experiment}

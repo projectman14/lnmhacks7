@@ -11,6 +11,8 @@ import Faq from './pages/Faq'
 import Schedule from './pages/Schedule'
 import Footer from './pages/Footer'
 import Sponser from './pages/Sponser'
+import Tracks from './pages/Tracks'
+import Judges from './pages/Judges'
 gsap.registerPlugin(useGSAP);
 
 function App() {
@@ -47,7 +49,9 @@ function App() {
         <Hero aboutRef={aboutRef} ctfRef={ctfRef} venueRef={venueRef} faqRef={faqRef} scheduleRef={scheduleRef} />
         <About aboutRef={aboutRef} />
         <Ctf ctfRef={ctfRef} />
+        {/* <Tracks /> */}
         <Sponser/>
+        <Judges />
         <Schedule scheduleRef={scheduleRef} />
         <Faq faqRef={faqRef} />
         <Venue venueRef={venueRef} />
