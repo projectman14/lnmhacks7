@@ -69,7 +69,7 @@ const Faqc = () => {
             <div className='flex-col xl:flex xl:flex-row xl:justify-between mx-24 mt-8'>
                 <div className='flex flex-col'>
                     <div className='mt-16 flex'>
-                        <TopicButton className={'text-xl font-normal tracking-wider h-12 w-48'} text={'Topic#5-FAQS'} />
+                        <TopicButton className={'text-xl font-normal tracking-wider h-12 w-48'} text={'Topic#6-FAQS'} />
                         <img src={experiment} alt="Experiment icon" className='ml-9 md:ml-[4rem] h-12 md:h-16 -mt-[0.2rem]' width="64" height="64"/>
                     </div>
                     <div className='flex -ml-5'>

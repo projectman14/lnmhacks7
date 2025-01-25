@@ -48,7 +48,7 @@ const Schedule = ({ scheduleRef }) => {
         >
             <div className='mx-[2rem] lg:mx-24 flex flex-col'>
                 <div className='mt-16 ml-5 flex lg:ml-3'>
-                    <TopicButton className={'text-lg md:text-xl font-normal max-sm:text-[1rem] tracking-wider h-12 w-64'} text={'Topic#4-Schedule'} />
+                    <TopicButton className={'text-lg md:text-xl font-normal max-sm:text-[1rem] tracking-wider h-12 w-64'} text={'Topic#5-Schedule'} />
                     <img src={scheduleImg} className='ml-9 md:ml-[4rem] h-12 md:h-16 -mt-[0.2rem]' alt="About Image 1" width="64" height="64" />
                 </div>
                 <div className='mt-4 lg:-ml-5'>
